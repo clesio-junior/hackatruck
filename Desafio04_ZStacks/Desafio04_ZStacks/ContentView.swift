@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var name = "Fulano"
+    @State private var showingAlert = false
     var body: some View {
         
         VStack(content: {
-
             
             ZStack(content: {
                 Image("img")
@@ -27,8 +27,10 @@ struct ContentView: View {
                     HStack(content: {
                         TextField("Digite o seu nome:", text: $name)
                             .multilineTextAlignment(.center)
-                    
                     })
+                    
+                    Spacer()
+                        .frame(height: 200)
 
                     HStack(content: {
                         Image("logo")
@@ -43,24 +45,22 @@ struct ContentView: View {
                             .frame(width:190, height:100)
                     })
                     
+                    Spacer()
+                        .frame(height: 250)
                     HStack(content: {
                         Button("Entrar") {
-                            /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
-                        }
+                            showingAlert = true}
+                        //.offset(x:10, y:350)
+                            .alert("Alerta! Você irá iniciar o desafio da aula agora", isPresented: $showingAlert) {
+                                    Button("OK", role: .cancel) { }}
                         .font(.title2)
-                        .offset(CGSize(width: 10.0, height: 220.0))
                     })
                 })
 
                     Spacer()
                 
                     .padding()
-                
-                
             })
-            
-            
-            
         })
         .padding()
     }
