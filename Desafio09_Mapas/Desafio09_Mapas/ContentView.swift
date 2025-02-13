@@ -71,15 +71,10 @@ struct ContentView: View {
                                                 span: MKCoordinateSpan(latitudeDelta: 0.25, longitudeDelta: 0.25)
                                             )
                                         )
-                                
-                                Annotation(arrayLocais[newIndex].name, coordinate: CLLocationCoordinate2D(latitude: posicao.latitude, longitude: posicao.longitude)) {
-                                    Image(systemName: "star.circle")
-                                        .resizable()
-                                        .foregroundStyle(.red)
-                                        .frame(width: 44, height: 44)
-                                        .background(.white)
-                                        .clipShape(.circle)
+                                Annotation("Teste", coordinate: posicao){
+                                    Image(systemName: "mapping")
                                 }
+                                    
                                 
                                 
                                     }
