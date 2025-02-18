@@ -23,7 +23,7 @@ struct ContentView: View {
                 ProgressView()
             }
             
-            Text("\(vmSimpsons.arraySimpsons.count)")
+//            Text("\(vmSimpsons.arraySimpsons.count)")
             ScrollView{
             VStack{
                 ForEach(vmSimpsons.arraySimpsons, id:\.self){ m in
@@ -31,10 +31,14 @@ struct ContentView: View {
                         VStack(content: {
                             AsyncImage(url: URL(string: m.image)) { image in
                                 image.resizable()
+                                    .scaledToFit()
+//                                    .background(Color.white)
                                     .frame(width:100, height:120)
+//                                    .background(Color.white)
                             } placeholder: {
                                 ProgressView()
                             }
+                            .background(Color.white)
                             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                         })
                         Spacer()
