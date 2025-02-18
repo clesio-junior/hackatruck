@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C539D36E2D64AFF7001744E9 /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C539D36D2D64AFF7001744E9 /* SheetView.swift */; };
 		C542DDB12D6361CD000292A7 /* Desafio10_API_sApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542DDB02D6361CD000292A7 /* Desafio10_API_sApp.swift */; };
 		C542DDB32D6361CD000292A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C542DDB22D6361CD000292A7 /* ContentView.swift */; };
 		C542DDB52D6361CE000292A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C542DDB42D6361CE000292A7 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C539D36D2D64AFF7001744E9 /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
 		C542DDAD2D6361CD000292A7 /* Desafio10_API's.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Desafio10_API's.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C542DDB02D6361CD000292A7 /* Desafio10_API_sApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desafio10_API_sApp.swift; sourceTree = "<group>"; };
 		C542DDB22D6361CD000292A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				C542DDB62D6361CE000292A7 /* Preview Content */,
 				C542DDC02D6362E5000292A7 /* Model.swift */,
 				C542DDC22D6362F0000292A7 /* ViewModel.swift */,
+				C539D36D2D64AFF7001744E9 /* SheetView.swift */,
 			);
 			path = "Desafio10_API's";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				C542DDC12D6362E5000292A7 /* Model.swift in Sources */,
 				C542DDB32D6361CD000292A7 /* ContentView.swift in Sources */,
+				C539D36E2D64AFF7001744E9 /* SheetView.swift in Sources */,
 				C542DDC32D6362F0000292A7 /* ViewModel.swift in Sources */,
 				C542DDB12D6361CD000292A7 /* Desafio10_API_sApp.swift in Sources */,
 			);
