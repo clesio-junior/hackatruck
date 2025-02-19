@@ -1,0 +1,333 @@
+[
+    {
+        "id": "8bd7dc231fdcc971",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e2f9e2e3abb6d974",
+        "type": "http in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "url": "/postCle2",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "c64ed7e2a2498ba6"
+            ]
+        ]
+    },
+    {
+        "id": "8864a70d3e5a9485",
+        "type": "http response",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 610,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5e0cc78c199f76e5",
+        "type": "cloudantplus out",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "cloudant": "d18906f81c38456a",
+        "database": "clesiojr",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 380,
+        "y": 120,
+        "wires": [
+            [
+                "8864a70d3e5a9485"
+            ]
+        ]
+    },
+    {
+        "id": "1423169217188972",
+        "type": "http in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "url": "/getCle2",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "243988bd656b59e2"
+            ]
+        ]
+    },
+    {
+        "id": "aa7c1105b8e96566",
+        "type": "http response",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 430,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "243988bd656b59e2",
+        "type": "cloudantplus in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "cloudant": "d18906f81c38456a",
+        "database": "clesiojr",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 280,
+        "y": 220,
+        "wires": [
+            [
+                "aa7c1105b8e96566"
+            ]
+        ]
+    },
+    {
+        "id": "c64ed7e2a2498ba6",
+        "type": "split",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 250,
+        "y": 60,
+        "wires": [
+            [
+                "5e0cc78c199f76e5"
+            ]
+        ]
+    },
+    {
+        "id": "3ba2d68be0143710",
+        "type": "http in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "url": "/postPessoa",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 110,
+        "y": 360,
+        "wires": [
+            [
+                "bcc46a98a32eb5ba"
+            ]
+        ]
+    },
+    {
+        "id": "02cc1efbf0ec5f5a",
+        "type": "http response",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "dd66e3d6428c40b5",
+        "type": "cloudantplus out",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "cloudant": "d18906f81c38456a",
+        "database": "clesiojr2",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "02cc1efbf0ec5f5a"
+            ]
+        ]
+    },
+    {
+        "id": "bcc46a98a32eb5ba",
+        "type": "split",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 270,
+        "y": 320,
+        "wires": [
+            [
+                "dd66e3d6428c40b5"
+            ]
+        ]
+    },
+    {
+        "id": "4b9cd927562667c4",
+        "type": "http in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "url": "/getPessoa",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 460,
+        "wires": [
+            [
+                "7d8ec9c031dcddf7"
+            ]
+        ]
+    },
+    {
+        "id": "910c53179262cac8",
+        "type": "http response",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7d8ec9c031dcddf7",
+        "type": "cloudantplus in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "cloudant": "d18906f81c38456a",
+        "database": "clesiojr2",
+        "service": "_ext_",
+        "search": "_all_",
+        "design": "",
+        "index": "",
+        "x": 320,
+        "y": 460,
+        "wires": [
+            [
+                "910c53179262cac8"
+            ]
+        ]
+    },
+    {
+        "id": "03566d16909437e1",
+        "type": "http in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "url": "/deletePessoa",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "f32e44ae1b808bc8"
+            ]
+        ]
+    },
+    {
+        "id": "ba3976bf72a4cb2f",
+        "type": "http response",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "f32e44ae1b808bc8",
+        "type": "cloudantplus out",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "cloudant": "d18906f81c38456a",
+        "database": "clesiojr2",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "delete",
+        "x": 320,
+        "y": 560,
+        "wires": [
+            [
+                "ba3976bf72a4cb2f"
+            ]
+        ]
+    },
+    {
+        "id": "476e0a50e54f1a59",
+        "type": "http in",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "url": "/putPessoa",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 100,
+        "y": 660,
+        "wires": [
+            [
+                "f5a223cab3c8908b"
+            ]
+        ]
+    },
+    {
+        "id": "24c0d4f257af0f10",
+        "type": "http response",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "f5a223cab3c8908b",
+        "type": "cloudantplus out",
+        "z": "8bd7dc231fdcc971",
+        "name": "",
+        "cloudant": "d18906f81c38456a",
+        "database": "clesiojr2",
+        "service": "_ext_",
+        "payonly": true,
+        "operation": "insert",
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [
+                "24c0d4f257af0f10"
+            ]
+        ]
+    },
+    {
+        "id": "d18906f81c38456a",
+        "type": "cloudantplus",
+        "host": "https://f1c0dcf9-5075-4061-a1f8-2f4ca596058a-bluemix.cloudantnosqldb.appdomain.cloud",
+        "name": "Credencial_Jr",
+        "useapikey": true
+    }
+]
