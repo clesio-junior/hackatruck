@@ -24,16 +24,13 @@ struct ContentView: View {
         
         NavigationView{
         VStack {
-                Text("aaaaaaa")
-            //            Text("\(vmSimpsons.arraySimpsons.count)")
+            //Text("\(vmSimpsons.arraySimpsons.count)")
             ScrollView{
                 VStack{
-                    ForEach(vmUmidade.arrayUmidade, id:\.self){ m in
+                    ForEach(vmUmidade.arrayUmidade.sorted{ $0.data < $1.data}, id:\.self){ m in
 
                         HStack(content: {
- 
-                            Spacer()
-                            VStack(content: {
+                             VStack(content: {
                                 HStack(alignment: .center,  content: {
                                     Text(m.umidade)
                                 })
