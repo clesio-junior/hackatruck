@@ -9,5 +9,5 @@ import Foundation
 
 struct SensorUmidade: Codable, Hashable{
     var umidade: String
-    var data: String
+    var data: Int
 }

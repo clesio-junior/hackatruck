@@ -39,7 +39,7 @@ struct ContentView: View {
                                 })
                                 .frame(alignment: .leading)
                                 HStack(alignment: .center,content: {
-                                    Text(m.data)
+                                    Text("")
                                         .font(.footnote)
                                 })
                                 .frame(alignment: .leading)
